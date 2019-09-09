@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Batidos Vegetais">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <!--MATERIALIZE-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,800&display=swap&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&display=swap&subset=latin-ext,vietnamese"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div :style="fonts" id="app">
+        <nav class="darken-1" v-bind:class="bg" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="#" class="brand-logo">{{navbrand}}</a>
+                <ul class="right hide-on-med-and-down">
+                    <menu-items v-for="item in menuItems" v-bind:key='menuItems.id' v-bind:item='item'></menu-items>
+                </ul>
+
+                <ul id="nav-mobile" class="sidenav">
+                    <menu-items v-for="item in menuItems" v-bind:key='menuItems.id' v-bind:item='item'></menu-items>
+                </ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+
+        <div id="index-banner" class="parallax-container">
+            <div class="section no-pad-bot">
+                <div class="container">
+                    <br><br>
+                    <h1 class="header center white-text">{{title}}</h1>
+                    <div class="row center">
+                        <h5 class="header col s12 light">{{headers[0]}}</h5>
+                    </div>
+                    <div class="row center">
+                        <a href="#modal1"
+                            class="btn-large modal-trigger waves-effect waves-light  yellow darken-2 z-depth-4 pulse">SUBSCREVA
+                            AS
+                            NOTÍCIAS</a>
+                        <!-- Modal Structure -->
+                        <div id="modal1" class="modal">
+                            <div class="modal-content">
+                                <h4>Subscrever a nossa newsletter!</h4>
+                                <div class="input-field col s12">
+                                    <input id="email" type="email" class="validate">
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <a href="#!" class="modal-close waves-effect waves-green btn">Subscrever</a>
+                        </div>
+                    </div>
+                    <br><br>
+
+                </div>
+            </div>
+            <div class="parallax"><img src="assets/img/4.jpg" alt="Batidos Vegetais"></div>
+        </div>
+
+
+        <div class="container">
+            <div class="section">
+
+                <!--   Icon Section   -->
+                <div class="row">
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center brown-text"><i class="material-icons">local_drink</i></h2>
+                            <p class="light">
+                                {{posts[0]}}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center brown-text"><i class="material-icons">local_florist</i></h2>
+
+                            <p class="light">
+                                {{posts[1]}}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center brown-text"><i class="material-icons">favorite_border</i></h2>
+
+                            <p class="light">
+                                {{posts[2]}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="parallax-container valign-wrapper">
+            <div class="section no-pad-bot">
+                <div class="container">
+                    <div class="row center">
+                        <h3 class="header col s12 light">{{headers[1]}}</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax"><img src="assets/img/3.jpg" alt="Batidos Vegetais"></div>
+        </div>
+
+        <div class="container">
+            <div class="section">
+
+                <div class="row recept">
+                    <div class="col s12 center">
+                        <p class="left-align light">Esse smoothie verde é bom para hidratar a pele e limpar seu corpo. O
+                            leite de coco
+                            e água de coco são benéficos para a pele, enquanto o limão e o espinafre são excelentes para
+                            desintoxicar o
+                            corpo.</p>
+                        <h5 class="left-align">INGREDIENTES</h5>
+                        <ul class="collection left-align light">
+                            <li class="collection-item">2 xícaras de espinafre</li>
+                            <li class="collection-item">½ xícara de água de coco</li>
+                            <li class="collection-item">½ xícara de leite de coco</li>
+                            <li class="collection-item">1 limão (espremido)</li>
+                            <li class="collection-item">½ uma banana congelada</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="parallax-container valign-wrapper">
+            <div class="section no-pad-bot">
+                <div class="container">
+                    <div class="row center">
+                        <h4 class="header col s12 light">{{headers[2]}}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax"><img src="assets/img/2.jpeg" alt="Batidos Vegetais"></div>
+        </div>
+
+        <footer class="page-footer" :class="bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col l3 s12">
+                        <a id="logo-container" href="#" class="brand-logo">{{navbrand}}</a>
+                        <ul>
+                            <menu-items v-for="item in menuItems" v-bind:key='menuItems.id' v-bind:item='item'>
+                            </menu-items>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    Copyrights © 2019 <a class="brown-text text-lighten-3" href="#">{{navbrand}} </a>All rightrs
+                    reserved.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/materialize.min.js"></script>
+    <script src="assets/js/init.js"></script>
+
+    <script src="assets/js/fonts.js"></script>
+    <script src="assets/js/colors.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/title.js"></script>
+    <script src="assets/js/menu.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+/* Custom Stylesheet */
+
+.light {
+  text-align: center;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #fff;
+}
+
+.parallax-container {
+    background-color: rgba(0,41,38,0.5);
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+#modal1{
+    color: #212121;
+    width: 40%;
+    padding-bottom: 40px;
+}
+#modal1 .input-field{
+    margin-bottom: 10px;
+}
+
+.recept{
+    padding: 0px 8%;
+}
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+    #modal1{
+        width: 50%;
+        padding-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+    #modal1{
+        width: 80%;
+        padding-bottom: 20px;
+    }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+footer a{
+    color: #fff;
+}
+
+footer .brand-logo{
+    font-size: 2.1rem;
+}
